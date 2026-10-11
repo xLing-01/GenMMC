@@ -1,0 +1,102 @@
+{
+  "contract": {
+    "configuration": {
+      "optimizer_name": "adamw",
+      "epochs": 200,
+      "seed": 42,
+      "batch_size": 64,
+      "microbatch_size": 8,
+      "eval_batch_size": 8,
+      "n_layer": 6,
+      "n_head": 6,
+      "n_embed": 192,
+      "condition_len": 64,
+      "block_size": 5521,
+      "dropout": 0.2,
+      "label_smoothing": 0.0,
+      "weight_decay": 0.1,
+      "learning_rate": 0.0003,
+      "warmup_steps": 1000,
+      "min_lr": 1e-06,
+      "lr_patience": 3,
+      "num_workers": 0,
+      "expected_dataset_sha256": "344a1ca8e95a91c4e873ba92f1aed69551354643aa5e0bfaf564f5ed0be81ddf",
+      "expected_split_sha256": "f09a20d7d3563b4a9c8ba32b333af672b9ab9f9a1ba08ea5732d59e177627211"
+    },
+    "runtime": {
+      "backend": "cuda",
+      "precision": "bfloat16",
+      "torch": "2.9.0+cu126",
+      "cuda": "12.6",
+      "cudnn": 91002
+    },
+    "source_sha256": {
+      "experiments/sparsest50_generalization_20260913/train.py": "c6d6eabb5405a10426d44aa396ba9b21fb8638c6f78e6196847780cfe7269738",
+      "experiments/sparsest50_generalization_20260913/core.py": "e0cb807240a6bd9ca59f78fa593fc4f7bc2b3e7a3e72e9f9b3d1451e4f16cda0",
+      "experiments/sparsest50_generalization_20260913/data.py": "0649dd7225c3800b4e7620cbdf3f67af479267d4204a85f6fb1d3c01690b0744",
+      "src/llm_main/model.py": "33ce1ddb8ddde08e1e7496488c3dc9b688c67fa19f9d166978b56503b76c9634",
+      "src/llm_main/transformer_unet_encoder.py": "b2c3ef0bfe81143c7e79f736af92d855c24e87de8fb50dac37f03c622274334e",
+      "experiments/ablation_20260916/train.py": "461d3a3b9f317945a9a207b37f504a71078067ea7fa1b515acd2ceb8d35a19ef"
+    },
+    "dataset_sha256": "344a1ca8e95a91c4e873ba92f1aed69551354643aa5e0bfaf564f5ed0be81ddf",
+    "split_indices_sha256": "f09a20d7d3563b4a9c8ba32b333af672b9ab9f9a1ba08ea5732d59e177627211",
+    "training_origin": "scratch",
+    "test_policy": "record_only_not_used_for_scheduler_or_selection",
+    "evaluation_policy": "all_three_complete_sets_same_frozen_weights_eval_plain_nonpad_token_weighted_ce"
+  },
+  "config": {
+    "dataset": "/mnt/data1t/tangshan/GeMMC/GeMMC/Dataset/curated/oh_mmc_outer80k_only_sparsest50_tokens_ceff_vf_32x32x32.h5",
+    "split_dir": "/mnt/data1t/tangshan/GeMMC/sparsest50_generalization_20260913/outputs/data_split",
+    "output_dir": "/mnt/data1t/tangshan/GeMMC/ablation_20260916_run/experiments/ablation_20260916/outputs/A08_seed42",
+    "optimizer_name": "adamw",
+    "epochs": 200,
+    "device": "cuda",
+    "seed": 42,
+    "batch_size": 64,
+    "microbatch_size": 8,
+    "eval_batch_size": 8,
+    "n_layer": 6,
+    "n_head": 6,
+    "n_embed": 192,
+    "condition_len": 64,
+    "block_size": 5521,
+    "dropout": 0.2,
+    "label_smoothing": 0.0,
+    "weight_decay": 0.1,
+    "learning_rate": 0.0003,
+    "warmup_steps": 1000,
+    "min_lr": 1e-06,
+    "lr_patience": 3,
+    "num_workers": 0,
+    "expected_dataset_sha256": "344a1ca8e95a91c4e873ba92f1aed69551354643aa5e0bfaf564f5ed0be81ddf",
+    "expected_split_sha256": "f09a20d7d3563b4a9c8ba32b333af672b9ab9f9a1ba08ea5732d59e177627211"
+  },
+  "created_at": 1789682983.745428,
+  "counts": {
+    "train": 21694,
+    "val": 2710,
+    "test": 2710
+  },
+  "normalizer_fit": "train_only",
+  "condition_names": [
+    "vf",
+    "C1111",
+    "C1122",
+    "C1212"
+  ],
+  "condition_mean": [
+    0.31350454688072205,
+    0.11251410841941833,
+    0.02579466439783573,
+    0.027683978900313377
+  ],
+  "condition_std": [
+    0.11372082680463791,
+    0.08188223838806152,
+    0.023297885432839394,
+    0.024948658421635628
+  ],
+  "early_stopping": false,
+  "epoch0_measured_before_optimizer_steps": true,
+  "previous_model_loaded": false
+}

@@ -1,0 +1,7 @@
+{
+  "epoch": 162,
+  "val_ce": 0.061060373593247584,
+  "checkpoint_sha256": "986f30202e79a7273410ccb63debc09bbb2716c21931d3333e608193cf8d98e2",
+  "selection_metric": "validation_ce_only",
+  "test_used": false
+}

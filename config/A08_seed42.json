@@ -1,0 +1,14 @@
+{
+  "dataset": "/mnt/data1t/tangshan/GeMMC/GeMMC/Dataset/curated/oh_mmc_outer80k_only_sparsest50_tokens_ceff_vf_32x32x32.h5",
+  "split_dir": "/mnt/data1t/tangshan/GeMMC/sparsest50_generalization_20260913/outputs/data_split",
+  "output_dir": "/mnt/data1t/tangshan/GeMMC/ablation_20260916_run/experiments/ablation_20260916/outputs/A08_seed42",
+  "expected_dataset_sha256": "344a1ca8e95a91c4e873ba92f1aed69551354643aa5e0bfaf564f5ed0be81ddf",
+  "expected_split_sha256": "f09a20d7d3563b4a9c8ba32b333af672b9ab9f9a1ba08ea5732d59e177627211",
+  "epochs": 200,
+  "dropout": 0.2,
+  "seed": 42,
+  "device": "cuda",
+  "n_embed": 192,
+  "microbatch_size": 8,
+  "eval_batch_size": 8
+}
